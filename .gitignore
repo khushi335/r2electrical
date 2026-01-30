@@ -1,4 +1,56 @@
-.env
-myenv/
-cert.pem/
-key.pem/
+# --------------------
+# Python
+# --------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --------------------
+# Django
+# --------------------
+*.sqlite3              # Local database
+db.sqlite3             
+
+# Media / Uploaded files
+media/
+staticfiles/
+
+# --------------------
+# Environment / Secrets
+# --------------------
+.env                   # Environment variables
+myenv/                 # Virtual environment folder
+cert.pem               # SSL certificate
+key.pem                # SSL private key
+
+# --------------------
+# VS Code / IDE
+# --------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --------------------
+# OS Files
+# --------------------
+.DS_Store
+Thumbs.db
+
+# --------------------
+# Logs
+# --------------------
+*.log
+
+# --------------------
+# Byte-compiled / cache files
+# --------------------
+*.pyc
+*.pyo
+*.pyd
+
+# --------------------
+# Others (Optional)
+# --------------------
+.env.local
+.env.*.local
