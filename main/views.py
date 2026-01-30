@@ -42,7 +42,7 @@ R2 Electrical & Air Conditioning
                         subject=f"New Inquiry from {inquiry.name}",
                         message=admin_message,
                         from_email=settings.DEFAULT_FROM_EMAIL,
-                        recipient_list=[settings.ADMIN_EMAIL],
+                        recipient_list=settings.ADMIN_EMAIL,
                         fail_silently=False,
                     )
 
@@ -109,7 +109,7 @@ R2 Electrical & Air Conditioning
                         subject=f"New Service Inquiry from {service_inquiry.name}",
                         message=admin_message,
                         from_email=settings.DEFAULT_FROM_EMAIL,
-                        recipient_list=[settings.ADMIN_EMAIL],
+                        recipient_list=settings.ADMIN_EMAIL,
                         fail_silently=False,
                     )
                     # Confirmation email to user
@@ -221,7 +221,7 @@ def contact(request):
                     subject=f"New Contact Message from {contact_instance.name}",
                     message=admin_message,
                     from_email=settings.DEFAULT_FROM_EMAIL,
-                    recipient_list=[settings.ADMIN_EMAIL],
+                    recipient_list=settings.ADMIN_EMAIL,
                     fail_silently=False,
                 )
 
