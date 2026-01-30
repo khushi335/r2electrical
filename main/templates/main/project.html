@@ -1,0 +1,326 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Projects – Before & After | R2 Electrical & Air Solutions{% endblock %}
+
+{% block extra_head %}
+
+<!-- SEO META -->
+<meta name="description" content="Explore before and after images of R2 Electrical & Air Conditioning projects. View real transformations in electrical installations, wiring upgrades, and air conditioning systems.">
+<meta name="keywords" content="Before After Electrical Projects, Electrical Installation Upgrade, AC Installation Before After, Commercial Electrical Work, R2 Electrical Projects">
+<link rel="canonical" href="https://www.r2electrical.com/projects">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "R2 Electrical Before and After Projects",
+  "description": "Before and after project gallery showcasing electrical and air conditioning installations by R2 Electrical & Air Conditioning.",
+  "image": [
+    "https://www.r2electrical.com/static/img/projects/project1-before.jpg",
+    "https://www.r2electrical.com/static/img/projects/project1-after.jpg",
+    "https://www.r2electrical.com/static/img/projects/project2-before.jpg",
+    "https://www.r2electrical.com/static/img/projects/project2-after.jpg"
+  ]
+}
+</script>
+
+<!-- PAGE-LEVEL CSS ONLY -->
+<style>
+    body {
+        font-family: "Poppins", sans-serif;
+    }
+
+    .section-subtitle {
+        color: #0d6efd;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .section-title {
+        font-weight: 700;
+        color: #0b2c4d;
+        margin-top: 10px;
+    }
+
+    .section-desc {
+        max-width: 720px;
+        margin: 15px auto 0;
+        color: #555;
+    }
+
+    .before-after-card {
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease;
+    }
+
+    .before-after-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .image-box {
+        position: relative;
+        height: 100%;
+    }
+
+    .image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .badge-label {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .badge-label.before {
+        background-color: #6c757d;
+    }
+
+    .badge-label.after {
+        background-color: #0d6efd;
+    }
+
+    .before-after-card .content {
+        padding: 24px;
+    }
+
+    .before-after-card h4 {
+        font-weight: 600;
+        color: #0b2c4d;
+    }
+
+    .before-after-card p {
+        color: #555;
+        font-size: 15px;
+    }
+
+    .bg-breadcrumb {
+        background: linear-gradient(rgba(11,44,77,0.85), rgba(11,44,77,0.85)),
+                    url("{% static 'img/breadcrumb-bg.jpg' %}") center/cover no-repeat;
+    }
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+<!-- PAGE HEADER -->
+<div class="container-fluid bg-breadcrumb py-5">
+    <div class="container text-center">
+        <h1 class="text-white display-3 fw-bold">Our Projects</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center mt-3">
+                <li class="breadcrumb-item">
+                    <a href="{% url 'index' %}" class="text-white-50">Home</a>
+                </li>
+                <li class="breadcrumb-item active text-white" aria-current="page">
+                    Projects
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- BEFORE AFTER PROJECTS -->
+<section class="container-fluid py-5 bg-light">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h4 class="section-subtitle">Project Transformation</h4>
+            <h2 class="section-title">Before & After Our Electrical Work</h2>
+            <p class="section-desc">
+                Real project transformations showcasing our expertise in electrical
+                installations and air conditioning solutions.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="row g-4">
+
+    <!-- 1. AC INSTALLATION -->
+    <div class="col-lg-6">
+        <div class="before-after-card">
+            <div class="row g-0">
+                <div class="col-md-6 image-box">
+                    <span class="badge-label before">Before</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Air conditioner installation before">
+                </div>
+                <div class="col-md-6 image-box">
+                    <span class="badge-label after">After</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Air conditioner installation after">
+                </div>
+            </div>
+            <div class="content">
+                <h4>Air-Conditioner Installation</h4>
+                <p>Professional installation of energy-efficient air conditioning systems.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. ELECTRICAL APPLIANCE REPAIR -->
+    <div class="col-lg-6">
+        <div class="before-after-card">
+            <div class="row g-0">
+                <div class="col-md-6 image-box">
+                    <span class="badge-label before">Before</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Electrical appliance repair before">
+                </div>
+                <div class="col-md-6 image-box">
+                    <span class="badge-label after">After</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Electrical appliance repair after">
+                </div>
+            </div>
+            <div class="content">
+                <h4>Electrical Appliance Repair</h4>
+                <p>Safe and reliable repair of faulty household and commercial appliances.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. SWITCHBOARD INSTALLATION -->
+    <div class="col-lg-6">
+        <div class="before-after-card">
+            <div class="row g-0">
+                <div class="col-md-6 image-box">
+                    <span class="badge-label before">Before</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Switchboard before upgrade">
+                </div>
+                <div class="col-md-6 image-box">
+                    <span class="badge-label after">After</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Switchboard after installation">
+                </div>
+            </div>
+            <div class="content">
+                <h4>Switchboard Installation</h4>
+                <p>Modern switchboard upgrades ensuring safety and compliance.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. FAN SUPPLY & INSTALLATION -->
+    <div class="col-lg-6">
+        <div class="before-after-card">
+            <div class="row g-0">
+                <div class="col-md-6 image-box">
+                    <span class="badge-label before">Before</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Fan installation before">
+                </div>
+                <div class="col-md-6 image-box">
+                    <span class="badge-label after">After</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Fan installation after">
+                </div>
+            </div>
+            <div class="content">
+                <h4>Fan Supply & Installation</h4>
+                <p>Efficient ceiling and exhaust fan supply and installation.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. NEW POWERPOINTS -->
+    <div class="col-lg-6">
+        <div class="before-after-card">
+            <div class="row g-0">
+                <div class="col-md-6 image-box">
+                    <span class="badge-label before">Before</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Powerpoint installation before">
+                </div>
+                <div class="col-md-6 image-box">
+                    <span class="badge-label after">After</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Powerpoint installation after">
+                </div>
+            </div>
+            <div class="content">
+                <h4>New Powerpoints Installation</h4>
+                <p>Additional powerpoints installed for modern living spaces.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. LIGHT REPAIR -->
+    <div class="col-lg-6">
+        <div class="before-after-card">
+            <div class="row g-0">
+                <div class="col-md-6 image-box">
+                    <span class="badge-label before">Before</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Light repair before">
+                </div>
+                <div class="col-md-6 image-box">
+                    <span class="badge-label after">After</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Light repair after">
+                </div>
+            </div>
+            <div class="content">
+                <h4>Light Repair & Installation</h4>
+                <p>Repair and installation of modern indoor lighting solutions.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. INDOOR & OUTDOOR INSTALLATION -->
+    <div class="col-lg-6">
+        <div class="before-after-card">
+            <div class="row g-0">
+                <div class="col-md-6 image-box">
+                    <span class="badge-label before">Before</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Outdoor electrical work before">
+                </div>
+                <div class="col-md-6 image-box">
+                    <span class="badge-label after">After</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Outdoor electrical work after">
+                </div>
+            </div>
+            <div class="content">
+                <h4>Indoor & Outdoor Installation</h4>
+                <p>Electrical installations for both indoor and outdoor environments.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. EMERGENCY CALL OUTS -->
+    <div class="col-lg-6">
+        <div class="before-after-card">
+            <div class="row g-0">
+                <div class="col-md-6 image-box">
+                    <span class="badge-label before">Before</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Electrical emergency before">
+                </div>
+                <div class="col-md-6 image-box">
+                    <span class="badge-label after">After</span>
+                    <img src="{% static 'img/ac.jpg' %}" alt="Electrical emergency resolved">
+                </div>
+            </div>
+            <div class="content">
+                <h4>Emergency Call-Outs</h4>
+                <p>Rapid response electrical emergency repairs and safety fixes.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+

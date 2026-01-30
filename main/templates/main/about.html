@@ -1,0 +1,403 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About Us - R2 Electrical & Air Solutions{% endblock %}
+
+{% block extra_head %}
+<meta name="description" content="Learn about R2 Electrical & Air Conditioning, our vision, mission, expert team, and why thousands trust us for professional electrical and air conditioning solutions.">
+<meta name="keywords" content="Electrical Services, Air Conditioning, Emergency Power, Electrical Installations, Solar Solutions, Professional Electricians, AC Installation & Maintenance">
+<link rel="canonical" href="https://www.r2electrical.com/about">
+
+<!-- Structured Data JSON-LD for Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "R2 Electrical & Air Conditioning",
+  "url": "https://www.r2electrical.com",
+  "logo": "https://www.r2electrical.com/static/img/logo.png",
+  "sameAs": [
+    "https://www.facebook.com/R2Electrical",
+    "https://www.twitter.com/R2Electrical",
+    "https://www.linkedin.com/company/r2-electrical-air-conditioning"
+  ],
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+977-1234567890",
+    "contactType": "customer service",
+    "areaServed": "NP",
+    "availableLanguage": ["English","Nepali"]
+  }],
+  "description": "R2 Electrical & Air Conditioning provides professional electrical and AC solutions, including emergency power, installations, wiring, and solar integration, trusted by thousands of clients."
+}
+</script>
+
+<!-- Structured Data JSON-LD for WebPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "About Us - R2 Electrical & Air Conditioning",
+  "description": "Learn about R2 Electrical & Air Conditioning, our vision, mission, expert team, and why thousands trust us for professional electrical and AC solutions.",
+  "url": "https://www.r2electrical.com/about",
+  "inLanguage": "en",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem","position": 1,"name": "Home","item": "https://www.r2electrical.com"},
+      {"@type": "ListItem","position": 2,"name": "Pages","item": "https://www.r2electrical.com/pages"},
+      {"@type": "ListItem","position": 3,"name": "About","item": "https://www.r2electrical.com/about"}
+    ]
+  }
+}
+</script>
+
+
+<link href="{% static 'css/about.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid bg-breadcrumb">
+    <div class="header-mask"></div> <div class="container text-center py-5 position-relative" style="z-index: 2;">
+        <h1 class="text-white display-2 fw-bold mb-3 animate-fade-in">About Us</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb d-flex justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="{% url 'index' %}" class="text-light-blue">Home</a></li>
+                <li class="breadcrumb-item"><span class="text-white-50">Pages</span></li>
+                <li class="breadcrumb-item active text-white" aria-current="page">About</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- About Start -->
+<section class="about-section py-5" id="about">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            
+            <div class="col-lg-7 animate fade-left">
+                <header class="mb-4">
+                    <span class="who-we-are">Who We Are</span>
+                    <h1 class="main-title-one-line">About R2 Electrical & Air Conditioning</h1>
+                </header>
+                
+                <div class="about-content">
+                    <p class="lead-text-large mb-4">R2 Electrical is a small, family-owned electrical business based in North Lakes, QLD, fully licensed, registered, and insured. We provide reliable electrical and air conditioning services for residential and light commercial clients.
+                    </p>
+
+                    <div class="row g-4 my-4">
+                        <div class="col-md-6">
+                            <article class="service-card">
+                                <span class="fas fa-bolt service-icon"></span>
+                                <h4>Electrical Installation, Repair & Replacement</h4>
+                            </article>
+                        </div>
+                        <div class="col-md-6">
+                            <article class="service-card">
+                                <span class="fas fa-snowflake service-icon"></span>
+                                <h4>Air Conditioning Installation & Servicing</h4>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="specialist-stack mb-4">
+                        <div class="special-item-row">
+                            <i class="fas fa-check-circle"></i>
+                            <p>We specialise  in new electrical in rewiring, air conditioning installations, lighting, power, and fans.</p>
+                        </div>
+                        <div class="special-item-row">
+                            <i class="fas fa-check-circle"></i>
+                            <p>The installation of electrical appliances including ovens, cooktops, and rangehoods.</p>
+                        </div>
+                        <div class="special-item-row">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Our services also include switchboard installations and replacements, single-phase to three-phase mains upgrades, hot water, and general electrical repairs.</p>
+                        </div>
+                    </div>
+
+                    <div class="compliance-box-elegant">
+                        <div class="compliance-status-bar"></div>
+                        <p class="mb-0">
+                            <strong>R2 Electrical is highly recommended for smoke alarm installations and replacements, completed to current Australian standards—giving you peace of mind that your home is safe and compliant.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 position-relative">
+                <div class="image-wrapper">
+                    <img src="{% static 'img/abot.jpg' %}" alt="R2 Electrical Service" class="main-img">
+                    
+                    <div class="experience-box">
+                        <h2>25+</h2>
+                        <p>Years Experience</p>
+                    </div>
+
+                    <div class="small-img-box">
+                        <img src="{% static 'img/abtt.jpg' %}" alt="AC Installation">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- About End -->
+
+<!-- Why Choose Us Section Start -->
+<section class="why-choose-us py-5">
+  <div class="container py-5">
+    <div class="row g-5 align-items-center">
+
+      <!-- Text Content -->
+      <div class="col-lg-6" data-aos="fade-right">
+        <h4 class="section-subtitle">Why Choose Us</h4>
+        <h2 class="section-title">Trusted by Thousands of Customers</h2>
+        <p class="section-desc">
+          At R2 Electrical & Air Conditioning, our commitment to quality, innovation, and customer satisfaction sets us apart. With years of expertise and a passion for excellence, we ensure every project is delivered beyond expectations.
+        </p>
+        <ul class="choose-list list-unstyled">
+          <li><i class="fa fa-check"></i> 24/7 Emergency Services</li>
+          <li><i class="fa fa-check"></i> Certified Professionals</li>
+          <li><i class="fa fa-check"></i> Affordable & Transparent Pricing</li>
+          <li><i class="fa fa-check"></i> Eco-Friendly & Sustainable Solutions</li>
+        </ul>
+      </div>
+
+      <!-- Image -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <img src="{% static 'img/r2_about.jpeg' %}" class="why-image" alt="Electrical Services">
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Why Choose Us Section End -->
+
+<!-- Services Start -->
+<section id="services" class="services-section">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mx-auto mb-5" style="max-width: 800px;">
+            <h4 class="section-subtitle">Our Services</h4>
+            <h1 class="section-title">Electrical & AC Solutions</h1>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-snowflake service-icon"></span>
+                    <h5 class="service-title">Air-Conditioner System Installation</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-fan service-icon"></span>
+                    <h5 class="service-title">Fan Supply & Installation / Replacement</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-bolt service-icon"></span>
+                    <h5 class="service-title">New Switch Board Installation & Replacement</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-plug service-icon"></span>
+                    <h5 class="service-title">Electrical Appliance Repair & Installation</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-bolt service-icon"></span>
+                    <h5 class="service-title">New Powerpoints Installation & Replacement</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-lightbulb service-icon"></span>
+                    <h5 class="service-title">New Light Installation & Repair</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-home service-icon"></span>
+                    <h5 class="service-title">Shed & Granny Flat Power Connection</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-water service-icon"></span>
+                    <h5 class="service-title">Indoor & Outdoor Installation</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-bolt service-icon"></span>
+                    <h5 class="service-title">Smoke Alarms Installation & Replacement</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services End -->
+
+<!-- Our Mission Section Start -->
+<section class="our-mission">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+            <h2 class="mission-title">Our Mission Is Your Satisfaction</h2>
+            <p class="mission-subtitle">
+                Expert Work That Is Purely Focused Around Providing 100% Customer Satisfaction
+            </p>
+        </div>
+
+        <!-- Mission Blocks -->
+        <div class="row g-4">
+            <!-- Safety Block -->
+            <div class="col-md-4 text-center" itemscope itemtype="https://schema.org/Service">
+                <div class="mission-block h-100">
+                    <div class="mission-icon mb-3">
+                        <i class="fa fa-shield-alt fa-3x" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="mission-heading" itemprop="name">Safety Is Our #1 Priority</h4>
+                    <p class="mission-text" itemprop="description">
+                        We Take Safety Very Seriously. No Shortcuts, No Compromises.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Time Block -->
+            <div class="col-md-4 text-center" itemscope itemtype="https://schema.org/Service">
+                <div class="mission-block h-100">
+                    <div class="mission-icon mb-3">
+                        <i class="fa fa-clock fa-3x" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="mission-heading" itemprop="name">We Are Mindful Of Your Time</h4>
+                    <p class="mission-text" itemprop="description">
+                        We come in and get the job done on time. We do what we say & we do it fast without compromising safety or quality.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quality Block -->
+            <div class="col-md-4 text-center" itemscope itemtype="https://schema.org/Service">
+                <div class="mission-block h-100">
+                    <div class="mission-icon mb-3">
+                        <i class="fa fa-tools fa-3x" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="mission-heading" itemprop="name">Quality Work Guaranteed</h4>
+                    <p class="mission-text" itemprop="description">
+                        R2 Electrical & Air Conditioning delivers high-quality services with precision and professionalism on every job.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Our Mission Section End -->
+
+<!-- FAQ Start -->
+<section id="faq">
+  <div class="faq-title">
+    <h4>Frequently Asked Questions</h4>
+    <h2>Your Questions Answered</h2>
+  </div>
+
+  <div class="faq-wrapper">
+    <!-- FAQ Item 1 -->
+    <div class="faq-card">
+      <input type="checkbox" id="faq1">
+      <label class="faq-question" for="faq1">
+        <span>What types of electrical services do you provide?</span>
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">
+        <p>R2 Electrical & Air Conditioning offers residential, commercial, and industrial services including wiring, AC installation & maintenance, outdoor powerpoints, smart home integration, and emergency power solutions.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="faq-card">
+      <input type="checkbox" id="faq2">
+      <label class="faq-question" for="faq2">
+        <span>Do you offer AC installation and repair?</span>
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">
+        <p>Yes! We provide professional AC installation, system replacement, troubleshooting, and preventive maintenance for homes and offices to ensure optimal cooling and energy efficiency.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="faq-card">
+      <input type="checkbox" id="faq3">
+      <label class="faq-question" for="faq3">
+        <span>Can you handle emergency electrical issues?</span>
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">
+        <p>Absolutely. Our certified technicians respond quickly to emergency call-outs, power outages, and backup generator issues to ensure safety and uninterrupted operations.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 4 -->
+    <div class="faq-card">
+      <input type="checkbox" id="faq4">
+      <label class="faq-question" for="faq4">
+        <span>Do you provide smart home integration?</span>
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">
+        <p>Yes, we install and integrate smart electrical systems, IoT-enabled devices, automated lighting, and climate control solutions for modern homes and offices.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 5 -->
+    <div class="faq-card">
+      <input type="checkbox" id="faq5">
+      <label class="faq-question" for="faq5">
+        <span>Are your services available on weekends?</span>
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">
+        <p>We offer flexible scheduling including weekends and evenings to accommodate your needs for electrical, AC, and emergency services.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FAQ End -->
+
+<!-- Scroll Animation JS -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+    const animationObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    animateElements.forEach(el => {
+        animationObserver.observe(el);
+    });
+});
+</script>
+
+{% endblock %}

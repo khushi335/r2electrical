@@ -1,0 +1,1029 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}R2 Electrical & Air Conditioning - Professional Electrical & AC Services{% endblock %}
+{% block meta_description %}Reliable electrical and air conditioning services for homes, offices, and industrial clients. Emergency power solutions, AC installation & maintenance, and full-service electrical layouts by certified experts at R2 Electrical & Air Conditioning with 25+ years of experience.{% endblock %}
+{% block meta_keywords %}R2 Electrical, air conditioning services, AC installation, electrical services, emergency electricity, professional electricians, industrial wiring, residential wiring, AC maintenance, electrical layout{% endblock %}
+
+
+{% block content %}
+
+<!-- Carousel Start -->
+<div class="header-carousel owl-carousel">
+
+    <!-- Slide 1 -->
+    <div class="header-carousel-item" id="quote">
+        <img src="{% static 'img/ac.jpg' %}" alt="Electrical Services">
+
+        <div class="carousel-caption">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <!-- Text Section -->
+                    <div class="col-xl-7 text-center text-xl-start">
+                        <!--<h4 class="carousel-h4 mb-3">R2 Electrical & Air Conditioning</h4>-->
+                        <h1 class="display-4 text-white fw-bold mb-4">Reliable Electrical & AC Solutions</h1>
+                        <p class="text-white fs-5 mb-4" style="text-align: justify;">
+                            We provide professional electrical and air conditioning services, including installation, repairs, maintenance, and safety inspections.
+                        </p>
+                    </div>
+
+                    <!-- Form Section -->
+                    <div class="col-xl-5">
+                        <div class="ticket-form p-4 p-md-5">
+                            <h2 class="text-dark text-uppercase mb-4">Request a Quote</h2>
+                            <form method="POST" action="">
+                                {% csrf_token %}
+                                {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-success">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                                <input type="text" name="name" class="form-control mb-3" placeholder="Your Name" required>
+                                <input type="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
+                                <input type="tel" name="phone" class="form-control mb-3" placeholder="Phone" required>
+                                <select name="service" class="form-select mb-3" required>
+                                    <option value="" disabled selected>Select Service</option>
+                                    <option value="Electrical Installation">Electrical Installation</option>
+                                    <option value="Air Conditioning">Air Conditioning</option>
+                                    <option value="Maintenance & Repairs">Maintenance & Repairs</option>
+                                    <option value="Switchboard Upgrades">Switchboard Upgrades</option>
+                                    <option value="Lighting & Powerpoints">Lighting & Powerpoints</option>
+                                    <option value="Smoke Alarm Installation">Smoke Alarm Installation</option>
+                                    <option value="Safety Inspections">Safety Inspections</option>
+                                    <option value="Other Electrical Service">Other Electrical Service</option>
+                                </select>
+                                <textarea name="message" class="form-control mb-3" rows="3" placeholder="Message" required></textarea>
+                                <!--<button type="submit" class="btn btn-orange w-100 py-2">Request Service</button>-->
+                                <button type="submit" name="carousel_submit" class="btn btn-orange">Request Service</button>
+
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="header-carousel-item">
+        <img src="{% static 'img/din.jpg' %}" alt="AC Installation Service">
+
+        <div class="carousel-caption">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <!-- Text Section -->
+                    <div class="col-xl-7 text-center text-xl-start">
+                        <h1 class="display-4 text-white fw-bold mb-4">Professional Service, Trusted by Homes & Businesses</h1>
+                        <p class="text-white fs-5 mb-4" style="text-align: justify;">
+                            Our certified electricians and AC specialists deliver safe, reliable, and energy-efficient solutions.
+                        </p>
+                    </div>
+
+                    <!-- Form Section -->
+                    <div class="col-xl-5">
+                        <div class="ticket-form p-4 p-md-5">
+                            <h2 class="text-dark text-uppercase mb-4">Request a Service</h2>
+                            <form method="POST" action="">
+                                {% csrf_token %}
+                                {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-success">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                                <input type="text" name="name" class="form-control mb-3" placeholder="Your Name" required>
+                                <input type="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
+                                <input type="tel" name="phone" class="form-control mb-3" placeholder="Phone" required>
+                                <select name="service" class="form-select mb-3" required>
+                                    <option value="" disabled selected>Select Service</option>
+                                    <option value="Electrical Installation">Electrical Installation</option>
+                                    <option value="Air Conditioning">Air Conditioning</option>
+                                    <option value="Maintenance & Repairs">Maintenance & Repairs</option>
+                                    <option value="Switchboard Upgrades">Switchboard Upgrades</option>
+                                    <option value="Lighting & Powerpoints">Lighting & Powerpoints</option>
+                                    <option value="Smoke Alarm Installation">Smoke Alarm Installation</option>
+                                    <option value="Safety Inspections">Safety Inspections</option>
+                                    <option value="Other Electrical Service">Other Electrical Service</option>
+                                </select>
+                                <textarea name="message" class="form-control mb-3" rows="3" placeholder="Message" required></textarea>
+                                <!--<button type="submit" class="btn btn-orange w-100 py-2">Request Service</button>-->
+                                <button type="submit" name="carousel_submit" class="btn btn-orange">Request Service</button>
+
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Carousel End -->
+
+<section class="qc-cta-section">
+    <div class="qc-hero-box">
+        <div class="qc-container">
+            <h2>Friendly Local Electricians, Servicing all Brisbane North Suburbs</h2>
+            <p class="qc-promo">
+    RELIABLE ELECTRICAL & AIR CONDITIONING SOLUTIONS
+    <span>QUALITY WORKMANSHIP YOU CAN TRUST</span>
+</p>
+<a href="#services" class="qc-btn-learn">OUR SERVICES</a>
+        </div>
+    </div>
+
+    <div class="qc-grid">
+        <div class="qc-card qc-blue">
+            <p>R2 Electrical & Air Conditioning – Guaranteed Work Always</p>
+            <div class="qc-badge">
+                <span class="top">QUALITY</span>
+                <span class="bottom">SERVICE</span>
+            </div>
+        </div>
+
+        <div class="qc-card qc-red">
+            <p>R2 Electrical & Air Conditioning Quote Request</p>
+            <a href="#quote" class="qc-outline-btn">GET A QUOTE</a>
+        </div>
+
+        <div class="qc-card qc-yellow">
+            <p class="dark-text">R2 Electrical & Air Conditioning Booking Request</p>
+            <a href="#contact" class="qc-outline-btn dark-border">MAKE A BOOKING ONLINE</a>
+        </div>
+
+        <div class="qc-card qc-dark">
+            <p>R2 Electrical & Air Conditioning – Call Us Today</p>
+            <div class="qc-call-area">
+                <span class="qc-call-label">CALL US TODAY</span>
+                <a href="tel:0497656471" class="qc-phone">0497 656 471</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Start -->
+<section class="about-section py-5" id="about">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            
+            <div class="col-lg-7 animate fade-left">
+                <header class="mb-4">
+                    <span class="who-we-are">Who We Are</span>
+                    <h1 class="main-title-one-line">About R2 Electrical & Air Conditioning</h1>
+                </header>
+                
+                <div class="about-content">
+                    <p class="lead-text-large mb-4">
+                        R2 Electrical is a small, family-owned electrical business based in North Lakes, QLD, fully licensed, registered, and insured. We provide reliable electrical and air conditioning services for residential and light commercial clients.
+                    </p>
+
+                    <div class="row g-4 my-4">
+                        <div class="col-md-6">
+                            <article class="service-card">
+                                <span class="fas fa-bolt service-icon"></span>
+                                <h4>Electrical Installation, Repair & Replacement</h4>
+                            </article>
+                        </div>
+                        <div class="col-md-6">
+                            <article class="service-card">
+                                <span class="fas fa-snowflake service-icon"></span>
+                                <h4>Air Conditioning Installation & Servicing</h4>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="specialist-stack mb-4">
+                        <div class="special-item-row">
+                            <i class="fas fa-check-circle"></i>
+                            <p>We are a North Lakes–based, fully licensed electrical contractor servicing Brisbane and surrounding areas. We specialise in rewiring and new electrical installations, including air conditioning, lighting, power, and ceiling fans for residential and commercial properties.</p>
+                        </div>
+                        <div class="special-item-row">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Our services include the installation of electrical appliances such as ovens, cooktops, and rangehoods, as well as switchboard installations and upgrades, single-phase to three-phase mains upgrades , and hot water system connections.</p>
+                        </div>
+                        <div class="special-item-row">
+                            <i class="fas fa-check-circle"></i>
+                            <p>We also provide preventive and proactive electrical maintenance, along with general electrical repairs and fault finding, ensuring all work is completed safely, compliantly, and to Australian Standards. </p>
+                        </div>
+                    </div>
+
+                    <div class="compliance-box-elegant">
+                        <div class="compliance-status-bar"></div>
+                        <p class="mb-0">
+                            <strong>R2 Electrical is highly recommended for smoke alarm installations and replacements, completed to current Australian standards—giving you peace of mind that your home is safe and compliant.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 position-relative">
+                <div class="image-wrapper">
+                    <img src="{% static 'img/abot.jpg' %}" alt="R2 Electrical Service" class="main-img">
+                    
+                    <div class="experience-box">
+                        <h2>25+</h2>
+                        <p>Years Experience</p>
+                    </div>
+
+                    <div class="small-img-box">
+                        <img src="{% static 'img/abtt.jpg' %}" alt="AC Installation">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- About End -->
+
+<section class="reasons-horizontal-section no-spacing">
+    <div class="qc-container">
+        <h2 class="reasons-title">REASONS TO CALL US</h2>
+        <div class="reasons-horizontal-row">
+            <div class="reason-card">
+                <i class="fas fa-user-shield qc-icon"></i>
+                <h3>Master Electricians</h3>
+                <p>Highly trained and accredited for maximum safety.</p>
+            </div>
+            <div class="reason-card">
+                <i class="fas fa-clock qc-icon"></i>
+                <h3>Prompt & Reliable</h3>
+                <p>We value your time and arrive on schedule.</p>
+            </div>
+            <div class="reason-card">
+                <i class="fas fa-award qc-icon"></i>
+                <h3>Quality Service</h3>
+                <p>Standing behind our work with a full quality service.</p>
+            </div>
+            <div class="reason-card">
+                <i class="fas fa-hard-hat qc-icon"></i>
+                <h3>Safety First</h3>
+                <p>Free safety checks included with every single job.</p>
+            </div>
+            <div class="reason-card">
+                <i class="fas fa-file-invoice-dollar qc-icon"></i>
+                <h3>Transparent Pricing</h3>
+                <p>Upfront quotes with no hidden costs or fees.</p>
+            </div>
+            <div class="reason-card">
+                <i class="fas fa-map-marker-alt qc-icon"></i>
+                <h3>Local & Friendly</h3>
+                <p>Your local experts based right in North Lakes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Why Choose Us Section Start -->
+<section class="why-choose-us py-5">
+  <div class="container py-5">
+    <div class="row g-5 align-items-center">
+
+      <!-- Text Content -->
+      <div class="col-lg-6" data-aos="fade-right">
+        <h4 class="section-subtitle">Why Choose Us</h4>
+        <h2 class="section-title">Trusted by Thousands of Customers</h2>
+        <p class="section-desc">
+          At R2 Electrical & Air Conditioning, our commitment to quality, innovation, and customer satisfaction sets us apart. With years of expertise and a passion for excellence, we ensure every project is delivered beyond expectations.
+        </p>
+        <ul class="choose-list list-unstyled">
+          <li><i class="fa fa-check"></i> 24/7 Emergency Services</li>
+          <li><i class="fa fa-check"></i> Certified Professionals</li>
+          <li><i class="fa fa-check"></i> Affordable & Transparent Pricing</li>
+          <li><i class="fa fa-check"></i> Eco-Friendly & Sustainable Solutions</li>
+        </ul>
+      </div>
+
+      <!-- Image -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <img src="{% static 'img/r2_about.jpeg' %}" class="why-image" alt="Electrical Services">
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Why Choose Us Section End -->
+
+
+<!-- Services Start -->
+<section id="services" class="services-section">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mx-auto mb-5" style="max-width: 800px;">
+            <h4 class="section-subtitle">Our Services</h4>
+            <h1 class="section-title">Electrical & AC Solutions</h1>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-snowflake service-icon"></span>
+                    <h5 class="service-title">Air-Conditioner System Installation</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-fan service-icon"></span>
+                    <h5 class="service-title">Fan Supply & Installation / Replacement</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-bolt service-icon"></span>
+                    <h5 class="service-title">New Switch Board Installation & Replacement</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-plug service-icon"></span>
+                    <h5 class="service-title">Electrical Appliance Repair & Installation</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-bolt service-icon"></span>
+                    <h5 class="service-title">New Powerpoints Installation & Replacement</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-lightbulb service-icon"></span>
+                    <h5 class="service-title">New Light Installation & Repair</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-home service-icon"></span>
+                    <h5 class="service-title">Shed & Granny Flat Power Connection</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-water service-icon"></span>
+                    <h5 class="service-title">Indoor & Outdoor Installation</h5>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+                    <span class="fas fa-bolt service-icon"></span>
+                    <h5 class="service-title">Smoke Alarms Installation & Replacement</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services End -->
+
+
+<!-- Projects Start -->
+<section id="projects" class="projects-section">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header mx-auto mb-5" style="max-width: 800px;">
+      <h4 class="section-subtitle">Our Projects</h4>
+      <h1 class="section-title">Completed Electrical & Other Installations</h1>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="project-card">
+          <img src="{% static 'img/swittch.jpeg' %}" alt="Powerpoint Installation" />
+          <div class="project-info"><h5>Switch Board Installation</h5></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="project-card">
+          <img src="{% static 'img/appliance_instation_repair.jpeg' %}" alt="Appliance Installation & Repair" />
+          <div class="project-info"><h5>Appliance Installation & Repair</h5></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="project-card">
+          <img src="{% static 'img/smarthomee.jpg' %}" alt="Smart Home Electrical Systems" />
+          <div class="project-info"><h5>Smart Home Systems</h5></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="project-card">
+          <img src="{% static 'img/acc.jpeg' %}" alt="Air Conditioner Installation" />
+          <div class="project-info"><h5>AC Installations</h5></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="project-card">
+          <img src="{% static 'img/wiring.jpeg' %}" alt="Electrical Wiring & Powerpoints" />
+          <div class="project-info"><h5>Wiring & Powerpoints</h5></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="project-card">
+          <img src="{% static 'img/lighting.jpg' %}" alt="Indoor Lighting Installation" />
+          <div class="project-info"><h5>Indoor Lighting</h5></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Projects End -->
+
+<!-- Our Mission Section Start -->
+<section class="our-mission">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+            <h2 class="mission-title">Our Mission Is Your Satisfaction</h2>
+            <p class="mission-subtitle">
+                Expert Work That Is Purely Focused Around Providing 100% Customer Satisfaction
+            </p>
+        </div>
+
+        <!-- Mission Blocks -->
+        <div class="row g-4">
+            <!-- Safety Block -->
+            <div class="col-md-4 text-center" itemscope itemtype="https://schema.org/Service">
+                <div class="mission-block h-100">
+                    <div class="mission-icon mb-3">
+                        <i class="fa fa-shield-alt fa-3x" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="mission-heading" itemprop="name">Safety Is Our #1 Priority</h4>
+                    <p class="mission-text" itemprop="description">
+                        We Take Safety Very Seriously. No Shortcuts, No Compromises.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Time Block -->
+            <div class="col-md-4 text-center" itemscope itemtype="https://schema.org/Service">
+                <div class="mission-block h-100">
+                    <div class="mission-icon mb-3">
+                        <i class="fa fa-clock fa-3x" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="mission-heading" itemprop="name">We Are Mindful Of Your Time</h4>
+                    <p class="mission-text" itemprop="description">
+                        We come in and get the job done on time. We do what we say & we do it fast without compromising safety or quality.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quality Block -->
+            <div class="col-md-4 text-center" itemscope itemtype="https://schema.org/Service">
+                <div class="mission-block h-100">
+                    <div class="mission-icon mb-3">
+                        <i class="fa fa-tools fa-3x" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="mission-heading" itemprop="name">Quality Work Guaranteed</h4>
+                    <p class="mission-text" itemprop="description">
+                        R2 Electrical & Air Conditioning delivers high-quality services with precision and professionalism on every job.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Our Mission Section End -->
+
+
+<!-- Testimonials Section Start -->
+<section id="testimonials" class="testimonials-section">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header text-center mx-auto mb-4" style="max-width: 800px;">
+      <h4 class="section-subtitle">Testimonials</h4>
+      <h1 class="section-title">What Our Clients Say</h1>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="row g-4">
+      <!-- Testimonial 1 -->
+      <div class="col-lg-6 col-md-12">
+        <div class="testimonial-card">
+          <p>
+            "We are very happy with the work that R2 Electrical completed for us. Our job consisted of replacing 2 fans, which was completed with no hassles and in a cheerful manner! The price was as quoted and we feel we got great value for money. Thanks!"
+          </p>
+          <h5>– Sandra</h5>
+          <span>North Lakes</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="col-lg-6 col-md-12">
+        <div class="testimonial-card">
+          <p>
+            "Rob was awesome, I definitely recommend him. He is friendly, knowledgeable and enthusiastic. His quote was very reasonable. He was on time and rang before he arrived. I will use him again for future electrical work."
+          </p>
+          <h5>– Mark</h5>
+          <span>Strathpine</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonials Section End -->
+
+
+<!-- Blog Section Start -->
+<section id="blog" class="blog-section">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header text-center mx-auto mb-4" style="max-width: 900px;">
+      <h4 class="section-subtitle">Latest Articles</h4>
+      <h1 class="section-title">Tips & Insights on Electrical & AC Services</h1>
+    </div>
+
+    <!-- Blog Carousel -->
+    <div class="blog-carousel">
+      <!-- Blog Post 1 -->
+      <div class="blog-card">
+        <div class="blog-icon">
+          <i class="fas fa-bolt fa-3x"></i>
+        </div>
+        <div class="blog-content">
+          <h5>Emergency Electrical & AC Response: What to Expect</h5>
+          <p>When the power goes out or your air‑conditioning fails, R2 Electrical & Air Conditioning is on call 24/7. Read about our response process, technician readiness, and how we restore comfort and safety swiftly.</p>
+        </div>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="blog-card">
+        <div class="blog-icon">
+          <i class="fas fa-lightbulb fa-3x"></i>
+        </div>
+        <div class="blog-content">
+          <h5>How to Maximize Energy Efficiency in Your Electrical System</h5>
+          <p>Discover practical upgrades and smart habits that reduce your electricity bills and carbon footprint. From wiring efficiency to smart controls, our experts explain what you should know.</p>
+        </div>
+      </div>
+
+      <!-- Blog Post 3 -->
+      <div class="blog-card">
+        <div class="blog-icon">
+          <i class="fas fa-snowflake fa-3x"></i>
+        </div>
+        <div class="blog-content">
+          <h5>The Complete AC Maintenance Checklist for Year‑Round Comfort</h5>
+          <p>Learn when and how to service your air conditioner to avoid breakdowns, maintain peak performance, and extend its lifespan. A must‑read for home and commercial clients.</p>
+        </div>
+      </div>
+
+      <!-- Blog Post 4 -->
+      <div class="blog-card">
+        <div class="blog-icon">
+          <i class="fas fa-home fa-3x"></i>
+        </div>
+        <div class="blog-content">
+          <h5>Smart Home Integration: Electrical Systems & Climate Control</h5>
+          <p>Want automated lighting, climate zones, and smart controls? Explore how we integrate electrical wiring, AC zoning, and IoT devices into modern homes and offices.</p>
+        </div>
+      </div>
+
+      <!-- Blog Post 5 -->
+      <div class="blog-card">
+        <div class="blog-icon">
+          <i class="fas fa-industry fa-3x"></i>
+        </div>
+        <div class="blog-content">
+          <h5>Industrial Wiring Safety & Compliance for Factories</h5>
+          <p>Essential guidance for industrial facilities: ensuring wiring meets code, handling large-scale AC loads, power distribution, and maintenance strategies to prevent downtime.</p>
+        </div>
+      </div>
+
+      <!-- Blog Post 6 -->
+      <div class="blog-card">
+        <div class="blog-icon">
+          <i class="fas fa-solar-panel fa-3x"></i>
+        </div>
+        <div class="blog-content">
+          <h5>Solar & Renewable Energy Integration with Electrical Systems</h5>
+          <p>Move toward sustainable power with R2 Electrical’s solar-ready wiring and AC systems. This article covers panel compatibility, backup options, and energy-efficient upgrades.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Blog Section End -->
+
+
+<!-- Banner / Contact CTA Start -->
+<div class="container-fluid banner py-5 wow zoomIn" data-wow-delay="0.2s">
+    <div class="banner-design-1"></div>
+    <div class="banner-design-2"></div>
+    <div class="container py-5 text-center">
+        <h4 class="text-white mb-2">Get in Touch</h4>
+        <h1 class="display-4 text-white mb-4">Professional Electrical & AC Services for Homes and Businesses</h1>
+        <a class="btn btn-main py-3 px-5 me-2" href="#contact">Contact Us</a>
+        <a class="btn btn-light py-3 px-5 ms-2" href="#services">Explore Services</a>
+    </div>
+</div>
+<!-- Banner End -->
+
+<!-- FAQ Start -->
+<section id="faq">
+  <div class="faq-title">
+    <h4>Frequently Asked Questions</h4>
+    <h2>Your Questions Answered</h2>
+  </div>
+
+  <div class="faq-wrapper">
+    <!-- FAQ Item 1 -->
+    <div class="faq-card">
+      <input type="checkbox" id="faq1">
+      <label class="faq-question" for="faq1">
+        <span>What types of electrical services do you provide?</span>
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">
+        <p>R2 Electrical & Air Conditioning offers residential, commercial, and industrial services including wiring, AC installation & maintenance, outdoor powerpoints, smart home integration, and emergency power solutions.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="faq-card">
+      <input type="checkbox" id="faq2">
+      <label class="faq-question" for="faq2">
+        <span>Do you offer AC installation and repair?</span>
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">
+        <p>Yes! We provide professional AC installation, system replacement, troubleshooting, and preventive maintenance for homes and offices to ensure optimal cooling and energy efficiency.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="faq-card">
+      <input type="checkbox" id="faq3">
+      <label class="faq-question" for="faq3">
+        <span>Can you handle emergency electrical issues?</span>
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">
+        <p>Absolutely. Our certified technicians respond quickly to emergency call-outs, power outages, and backup generator issues to ensure safety and uninterrupted operations.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 4 -->
+    <div class="faq-card">
+      <input type="checkbox" id="faq4">
+      <label class="faq-question" for="faq4">
+        <span>Do you provide smart home integration?</span>
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">
+        <p>Yes, we install and integrate smart electrical systems, IoT-enabled devices, automated lighting, and climate control solutions for modern homes and offices.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 5 -->
+    <div class="faq-card">
+      <input type="checkbox" id="faq5">
+      <label class="faq-question" for="faq5">
+        <span>Are your services available on weekends?</span>
+        <span class="faq-icon">+</span>
+      </label>
+      <div class="faq-answer">
+        <p>We offer flexible scheduling including weekends and evenings to accommodate your needs for electrical, AC, and emergency services.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FAQ End -->
+
+<!-- Service Areas Section Start -->
+<section class="service-areas-section py-5">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Locations We Serve</h2>
+      <p class="section-desc">
+        R2 Electrical & Air Conditioning proudly serves the following areas in and around North Lakes, providing trusted electrical and AC services.
+      </p>
+    </div>
+    <ul class="locations-list">
+      <li>Newport</li>
+      <li>Kallangur</li>
+      <li>Mango Hill</li>
+      <li>Caboolture</li>
+      <li>Narangba</li>
+      <li>Rothwell</li>
+      <li>Redcliffe</li>
+      <li>Scarborough</li>
+      <li>Brighton</li>
+      <li>Chermside</li>
+      <li>Deception Bay</li>
+      <li>Dakabin</li>
+      <li>Petrie</li>
+      <li>Carseldine</li>
+      <li>Murrumba Downs</li>
+      <li>Bridgeman Downs</li>
+    </ul>
+
+    <!-- Floating Circles with Icons --><style>
+.cta-electrical {
+    max-width: 920px;
+    margin: 30px auto;
+    padding: 34px 28px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #ffffff, #eef3ff);
+    box-shadow: 0 22px 50px rgba(0,0,0,0.10);
+    position: relative;
+    font-family: inherit;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.06);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.7s ease;
+}
+
+.cta-electrical.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Decorative Blue Glow Circle */
+.cta-electrical::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #1e5bfa;
+    opacity: 0.10;
+    border-radius: 50%;
+    top: -70px;
+    right: -70px;
+}
+
+/* Badge */
+.cta-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #1e5bfa, #013cc3);
+    color: #fff;
+    padding: 7px 22px;
+    border-radius: 50px;
+    font-size: 13px;
+    margin-bottom: 14px;
+    box-shadow: 0 8px 20px rgba(30,91,250,0.4);
+}
+
+/* Heading */
+.cta-electrical h2 {
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 12px;
+    color: #1e5bfa;
+}
+
+/* Text */
+.cta-electrical p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    color: #000;
+}
+
+/* Call Button */
+.cta-call-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 16px 42px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+    background: linear-gradient(135deg, #1e5bfa, #013cc3);
+    border-radius: 60px;
+    text-decoration: none;
+    box-shadow: 0 14px 35px rgba(30,91,250,0.45);
+    transition: all 0.25s ease;
+}
+
+.cta-call-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 18px 45px rgba(30,91,250,0.55);
+}
+
+/* ABN */
+.cta-abn {
+    font-size: 15px;
+    margin-top: 16px;
+    color: #000;
+    font-weight: 900;
+}
+
+/* Sticky Mobile Call Button */
+.sticky-call {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .cta-electrical {
+        padding: 26px 18px;
+    }
+
+    .cta-electrical h2 {
+        font-size: 26px;
+    }
+
+    .cta-electrical p {
+        font-size: 16px;
+    }
+
+    .cta-call-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sticky-call {
+        display: block;
+        position: fixed;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(135deg, #1e5bfa, #013cc3);
+        color: #fff;
+        padding: 15px 36px;
+        border-radius: 60px;
+        font-weight: 800;
+        text-decoration: none;
+        z-index: 9999;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+}
+</style>
+
+<div class="cta-electrical" id="ctaElectrical">
+  <!--<span class="cta-badge">⚡ Fast Electrical Help</span>-->
+
+  <h2>Electrical Problems? We’re Here to Help.</h2>
+
+  <p>
+    Call now or complete the form to receive a fast, no-obligation electrical quote. 
+    One of our qualified electricians from R2 Electrical will be in touch shortly.
+  </p>
+
+  <a href="tel:0497656471" class="cta-call-btn">📞 Call Now: 0497 656 471</a>
+
+  <p class="cta-abn"><strong>ABN:</strong> <strong>99 202 664 758</strong></p>
+</div>
+
+<!--<a href="tel:0497656471" class="sticky-call">📞 Call Now: 0497 656 471</a>-->
+
+<script>
+const cta = document.getElementById("ctaElectrical");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+observer.observe(cta);
+</script>
+
+    <span class="circle circle1" data-icon="⚡"></span>
+    <span class="circle circle2" data-icon="❄"></span>
+    <span class="circle circle3" data-icon="🔌"></span>
+    <span class="circle circle4" data-icon="⚡"></span>
+    <span class="circle circle5" data-icon="❄"></span>
+  </div>
+</section>
+<!-- Service Areas Section End -->
+
+
+<!-- CTA Contact Form Start -->
+<section class="cta-contact py-5" id="contact">
+    <div class="container py-5">
+        <h2 class="cta-title text-center mb-5">Let’s Get In Touch</h2>
+
+        <div class="form-wrapper position-relative mx-auto">
+
+            <!-- Curved AC Airflow Lines -->
+            <svg class="airflow-svg" viewBox="0 0 1200 400" preserveAspectRatio="none">
+                <path class="airflow-path path1" d="M0,300 C300,200 900,400 1200,250" />
+                <path class="airflow-path path2" d="M0,200 C300,100 900,300 1200,180" />
+                <path class="airflow-path path3" d="M0,100 C400,0 800,200 1200,80" />
+            </svg>
+
+            <!-- Floating Icons -->
+            <div class="floating-icons">
+                <div class="icon icon-fan"><i class="fas fa-fan"></i></div>
+                <div class="icon icon-ac"><i class="fas fa-snowflake"></i></div>
+                <div class="icon icon-plug"><i class="fas fa-plug"></i></div>
+            </div>
+
+            <!-- Floating Circles -->
+            <div class="floating-circles">
+                <span class="circle circle1"></span>
+                <span class="circle circle2"></span>
+                <span class="circle circle3"></span>
+                <span class="circle circle4"></span>
+            </div>
+
+            <!-- Tiny Spark Particles -->
+            <div class="particles">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <!-- Contact Form -->
+            <form method="POST" action="{% url 'index' %}" class="cta-form p-5 rounded-4 shadow-lg">
+                {% csrf_token %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-success">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+                <div class="mb-3">{{ form.name }}{% if form.name.errors %}<div class="text-danger">{{ form.name.errors }}</div>{% endif %}</div>
+                <div class="mb-3">{{ form.email }}{% if form.email.errors %}<div class="text-danger">{{ form.email.errors }}</div>{% endif %}</div>
+                <div class="mb-3">{{ form.phone }}{% if form.phone.errors %}<div class="text-danger">{{ form.phone.errors }}</div>{% endif %}</div>
+                <div class="mb-3">{{ form.message }}{% if form.message.errors %}<div class="text-danger">{{ form.message.errors }}</div>{% endif %}</div>
+                <button type="submit" name="contact_submit" class="btn-submit w-100">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- CTA Contact Form End -->
+
+<div class="master-electrician-section fade-in">
+    <img 
+        src="{% static 'img/master_electricians.jpeg' %}" 
+        alt="Member of Master Electricians"
+        class="master-electrician-img"
+    >
+    <p class="master-electrician-text">
+        We are  Member of Master Electricians
+    </p>
+</div>
+
+<style>
+/* Master Electricians Section */
+.master-electrician-section {
+    margin: 48px auto 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    max-width: 320px;
+    padding: 0 16px;
+}
+
+/* Logo Image */
+.master-electrician-img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+/* Text */
+.master-electrician-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: inherit; /* Uses site text colour */
+    letter-spacing: 0.3px;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+    .master-electrician-section {
+        margin-top: 32px;
+    }
+
+    .master-electrician-img {
+        max-width: 150px;
+    }
+
+    .master-electrician-text {
+        font-size: 14px;
+    }
+}
+
+
+</style>
+
+{% endblock %}
